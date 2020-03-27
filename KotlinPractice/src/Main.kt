@@ -11,7 +11,10 @@ fun sayHello():String{
 fun sayHi():String = "hello"
 
 fun sayH() = "hello"
-fun hi(str:String, str1: String ) = println("$str $str1")
+fun hi(greetings:String, listItems: List<String> ){
+    listItems.forEach { item ->  println("$greetings :$item ")}
+
+}
 
 
 fun main(){
@@ -21,21 +24,30 @@ fun main(){
     //println(greeting)
 
     //println(sayH())
-    println(hi("murad","ahmad"))
+   // println(hi("murad","ahmad"))
 
-// array, List
+// array, List , map
 
-    val myArray = arrayOf("murad","ahmad", "khan")
+  //  val myArray = arrayOf("murad","ahmad", "khan")
 
     val myList = listOf("murad","ahmad", "khan")
+    hi("hello",myList)
+
+   // val myList = mutableListOf("murad","ahmad", "khan")
+    //myList.add("jalal")
 
     // for(items in myArray)
     //    println(items)
     //println(items[1])
 
     //myArray.forEach { items -> println(items) }
-    myArray.forEachIndexed { index, items -> println("each element at $index is $items ") }
+ //   myArray.forEachIndexed { index, items -> println("each element at $index is $items ") }
 
+ //   val map = mapOf(1 to "a", 2 to "b", 3 to "c")
+  //  map.forEach { key, value -> println("$key -> $value")  }
+   // val map = mutableMapOf(1 to "a", 2 to "b", 3 to "c")
+   // map.put(4,"d")
+    //map.forEach { key, value -> println("$key -> $value")  }
 
 
 
