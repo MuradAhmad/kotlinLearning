@@ -1,4 +1,4 @@
-
+/*
 // variables
 val name: String ="murad"
 var greeting: String = "Hello"
@@ -13,11 +13,18 @@ fun sayHi():String = "hello"
 fun sayH() = "hello"
 fun hi(greetings:String, listItems: List<String> ){
     listItems.forEach { item ->  println("$greetings :$item ")}
-
 }
 
+fun say(greetings:String,  vararg greetingsItem: String ){
+    greetingsItem.forEach { item ->  println("$greetings :$item ")}
+
+}*/
 
 fun main(){
+
+    val person = Person()
+
+    person.printInfo()
 
     //println(name)
 
@@ -29,9 +36,11 @@ fun main(){
 // array, List , map
 
   //  val myArray = arrayOf("murad","ahmad", "khan")
+  //  say("hi", * myArray)
 
-    val myList = listOf("murad","ahmad", "khan")
-    hi("hello",myList)
+
+  //  val myList = listOf("murad","ahmad", "khan")
+   // hi("hello",myList)
 
    // val myList = mutableListOf("murad","ahmad", "khan")
     //myList.add("jalal")
