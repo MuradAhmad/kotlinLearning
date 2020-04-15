@@ -11,10 +11,12 @@ interface SessionInfoProvider {
     fun getSessionId() : String
 }
 
-class BasicInfoProvider : PersonInfoProvider, SessionInfoProvider {
+open class BasicInfoProvider : PersonInfoProvider, SessionInfoProvider {
+
+   protected  open val sessionIdPrefix = "Session"
 
     override fun getSessionId(): String {
-        return "Session"
+        return sessionIdPrefix
     }
 
     override val providerInfo: String
@@ -27,7 +29,8 @@ class BasicInfoProvider : PersonInfoProvider, SessionInfoProvider {
 
 fun main(){
 
-    val provider = BasicInfoProvider()
+    val provider = FancyInvokeProvider()
+   // val provider = BasicInfoProvider()
     provider.printInfo(Person())
 
     checkTypes(provider)
@@ -42,6 +45,9 @@ fun checkTypes(infoProvider: SessionInfoProvider){
         println(" is not a session provider")
 
     }
+   //WE do not need to use explicit casting, therefore (infoProvider as SessionInfoProvider).getSessionId()
+    //infoProvider.getSessionId()
+
 
 
 }
